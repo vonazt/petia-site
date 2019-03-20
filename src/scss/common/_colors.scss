@@ -1,0 +1,20 @@
+body {
+  background-color: #2b2d2f;
+}
+
+.gradient {
+  background: linear-gradient(to right, #14b450, #9650a0, #dc3c3c);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.landing-subtitle {
+  color: white;
+}
+
+nav.navbar {
+  background-color: #2b2d2f;
+  .navbar-item {
+   color: white;
+  }
+}

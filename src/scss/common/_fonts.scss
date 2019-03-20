@@ -1,0 +1,21 @@
+@import './variables';
+
+h1.landing-title {
+  font-family: $body-font;
+  font-size: 10rem;
+}
+
+h2.landing-subtitle {
+  font-family: $body-font;
+  font-size: 4rem;
+}
+
+h3.landing-subtitle {
+  font-family: $body-font;
+  font-size: 2rem;
+}
+
+.navbar-item {
+  font-family: $body-font;
+  font-size: 2rem;
+}

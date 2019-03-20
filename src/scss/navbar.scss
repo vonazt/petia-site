@@ -1,0 +1,16 @@
+@import "./common/colors";
+
+.navbar-end {
+  a.navbar-item {
+    &:hover {
+      background-color: $charcoal;
+      color: white;
+      border-width: 8px;
+      border-style: solid;
+      border-image: 
+        linear-gradient(to right, #14b450, #9650a0, #dc3c3c) 0 0 100;
+      padding: 0;
+      margin: 0;  
+    }
+  }
+}
