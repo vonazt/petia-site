@@ -11,7 +11,7 @@ export default class Home extends Component {
             <h2 class="landing-subtitle">Consulting</h2>
             <h3 class="landing-subtitle gradient">
               Full website coming soon. Meanwhile drop me a note at{" "}
-              <a href="mailto:hello@petia.uk" style={{borderBottom: "1px solid white"}}>
+              <a href="mailto:hello@petia.uk" target="_blank" rel="noopener noreferrer" style={{borderBottom: "1px solid white"}}>
                hello@petia.uk
               </a>
             </h3>
