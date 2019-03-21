@@ -1,29 +1,3 @@
-// body {
-//   animation: heroAnimation 1000s ease-in infinite;
-//   background: linear-gradient(
-//     to right,
-//     #14b450,
-//     #2878b4,
-//     #5a28be,
-//     #9650a0,
-//     #dc3c3c
-//   );
-//   background-size: 350% 350%;
-//   height: 100vh;
-// }
-
-// @keyframes heroAnimation {
-//   0% {
-//     background-position: 1% 0%;
-//   }
-//   50% {
-//     background-position: 99% 100%;
-//   }
-//   100% {
-//     background-position: 1% 0%;
-//   }
-// }
-
 @import './common/fonts';
 @import './common/colors';
 @import './common/base';

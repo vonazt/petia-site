@@ -4,5 +4,12 @@
 }
 
 h3.landing-subtitle {
-  padding-top: 2rem;
+  padding-top: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  h3.landing-subtitle {
+    padding-top: 2rem;
+  }
+  
 }
