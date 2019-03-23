@@ -1,4 +1,10 @@
+@import './variables';
+
 body {
-  height: 100vh;
   box-sizing: border-box;
+  background-color: $charcoal;
+}
+
+.sloped {
+  clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% 100%, 0% 100%);
 }

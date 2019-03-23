@@ -5,9 +5,13 @@ h1.landing-title {
   font-size: 3.5rem;
 }
 
-h2.landing-subtitle {
+h2.landing-subtitle, h2.section-heading {
   font-family: $body-font;
   font-size: 1.5rem;
+}
+
+h2.section-heading {
+  text-align: center;
 }
 
 h3.landing-subtitle {
@@ -40,7 +44,7 @@ h3.landing-subtitle {
     font-size: 10rem;
   }
   
-  h2.landing-subtitle {
+  h2.landing-subtitle, h2.section-heading {
     font-size: 4rem;
   }
   
