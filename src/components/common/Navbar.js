@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+import NavLink from "./NavLink";
 
 class Navbar extends Component {
   state = {
-    navbarOpen: false
+    navbarOpen: false,
+    navClass: { navbar: "landing-nav", item: "landing-nav-item" }
   };
 
   toggleNavbar = () => {
@@ -16,9 +18,37 @@ class Navbar extends Component {
     }
   }
 
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll, true);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll = event => {
+    console.log("event", event);
+    if (window.pageYOffset < 943)
+      this.setState({
+        navClass: { navbar: "landing-nav", item: "landing-nav-item" }
+      });
+    if (window.pageYOffset >= 943)
+      this.setState({
+        navClass: { navbar: "about-nav", item: "about-nav-item" }
+      });
+  };
+
   render() {
+    const { navClass } = this.state;
+    const {
+      location: { pathname }
+    } = this.props;
     return (
-      <nav className="navbar is-fixed-top" role="navigation" aria-label="main-naivagation">
+      <nav
+        className={`navbar is-fixed-top ${navClass.navbar}`}
+        role="navigation"
+        aria-label="main-naivagation"
+      >
         <div className="navbar-brand">
           <a
             className={`navbar-burger${
@@ -39,30 +69,21 @@ class Navbar extends Component {
           className={`navbar-menu${this.state.navbarOpen ? " is-active" : ""}`}
         >
           <div className="navbar-end">
-            <Link
-              to="/about"
-              className="navbar-item"
-            >
-              About
-            </Link>
-            <Link
-              to="/work"
-              className="navbar-item"
-            >
-              Work
-            </Link>
-            <Link
-              to="/collaborators"
-              className="navbar-item"
-            >
-              Collaborators
-            </Link>
-            <Link
-              to="/contact"
-              className="navbar-item"
-            >
-              Contact
-            </Link>
+            {pathname !== "/" && (
+              <NavLink section="Home" navClass={navClass.item} />
+            )}
+            {pathname !== "/about" && (
+              <NavLink section="About" navClass={navClass.item} />
+            )}
+            {pathname !== "/work" && (
+              <NavLink section="Work" navClass={navClass.item} />
+            )}
+            {pathname !== "/collaborators" && (
+              <NavLink section="Collaborators" navClass={navClass.item} />
+            )}
+            {pathname !== "/contacts" && (
+              <NavLink section="Contacts" navClass={navClass.item} />
+            )}
           </div>
         </div>
       </nav>
@@ -70,4 +91,4 @@ class Navbar extends Component {
   }
 }
 
-export default withRouter(Navbar)
+export default withRouter(Navbar);

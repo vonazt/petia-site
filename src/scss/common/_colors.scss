@@ -23,8 +23,15 @@
 }
 
 nav.navbar {
-  background-color: #2b2d2f;
-  .navbar-item {
+  background-color:$charcoal;
+  .navbar-item.landing-nav-item {
    color: $off-white;
   }
+  .navbar-item.about-nav-item {
+    color: black;
+   }
+}
+
+nav.about-nav {
+background-color: $off-white;
 }

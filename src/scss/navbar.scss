@@ -4,7 +4,7 @@
 @media only screen and (min-width: 768px) {
   
   .navbar-end {
-    a.navbar-item {
+    a.navbar-item.landing-nav-item {
       border: .5rem solid $charcoal;
       &:hover {
         background-color: $charcoal;
@@ -16,7 +16,21 @@
         padding-bottom: .5rem;
       }
     }
+    a.navbar-item.about-nav-item {
+      border: .5rem solid $off-white;
+      &:hover {
+        background-color: $off-white;
+        color: black;
+        border-width: .5rem;
+        border-style: solid;
+        border-image: 
+          linear-gradient(to right, #14b450, #9650a0, #dc3c3c) 0 1 100;
+        padding-bottom: .5rem;
+      }
+    }
   }
+
+
 }
 
 

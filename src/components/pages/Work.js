@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
 
-const About = () => (
+const Work = () => (
   <Fragment>
-    <section className="about-container">
+    <section className="work-container sloped">
       <div className="container">
         <div className="columns">
           <div className="column is-fullwidth">
-            <h2 className="section-heading">About</h2>
+            <h2 className="section-heading">Work</h2>
           </div>
         </div>
         <div className="columns">
@@ -70,4 +70,4 @@ const About = () => (
   </Fragment>
 );
 
-export default About;
+export default Work
