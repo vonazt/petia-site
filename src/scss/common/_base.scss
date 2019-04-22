@@ -2,9 +2,14 @@
 
 body {
   box-sizing: border-box;
-  background-color: $charcoal;
+  background-color: red;
 }
 
 .sloped {
   clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% 100%, 0% calc(100% - 7vw));
+}
+
+.down-slope {
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% calc(100% - 7vw));
+  margin-bottom: -5vh;
 }

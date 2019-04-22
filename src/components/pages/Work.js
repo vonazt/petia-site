@@ -1,73 +1,51 @@
-import React, { Fragment } from "react";
+import React, { Component, Fragment } from "react";
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
 
-const Work = () => (
-  <Fragment>
-    <section className="work-container sloped">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-fullwidth">
-            <h2 className="section-heading">Work</h2>
+class Work extends Component {
+  render() {
+    return (
+      <Fragment>
+        <section className="work-container">
+          <div className="container">
+            <CarouselProvider
+              naturalSlideWidth={100}
+              naturalSlideHeight={30}
+              totalSlides={3}
+            >
+              <div className="columns is-vcentered is-centered">
+                <div className="column is-narrow">
+                  <ButtonBack className="arrow-left" />
+                </div>
+                <div className="column is-half">
+                  <Slider>
+                    <Slide index={0}>
+                      <h2 className="quote">"First slde"</h2>
+                    </Slide>
+                    <Slide index={1}>
+                      <h2 className="quote">"Second slide"</h2>
+                    </Slide>
+                    <Slide index={2}>
+                      <h2 className="quote">"Third Slide"</h2>
+                    </Slide>
+                  </Slider>
+                </div>
+                <div className="column is-narrow">
+                  <ButtonNext className="arrow-right" />
+                </div>
+              </div>
+            </CarouselProvider>
           </div>
-        </div>
-        <div className="columns">
-          <div className="column is-one-third">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-              tempus ante vel massa tempor fringilla eget sit amet lorem. Ut
-              euismod placerat velit, pharetra pellentesque augue feugiat in.
-              Quisque eu imperdiet mi. Nunc laoreet ac leo vel aliquam. Morbi
-              vitae felis lacus. In interdum euismod tellus. Vestibulum ultrices
-              neque et odio condimentum egestas. Etiam mattis consectetur
-              rhoncus. Duis nec mauris quis tortor finibus rhoncus id vitae
-              urna. Nulla interdum leo gravida porttitor dapibus. Pellentesque
-              vitae facilisis ex. Proin varius lacinia leo in placerat. Integer
-              in sollicitudin massa.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-              tempus ante vel massa tempor fringilla eget sit amet lorem. Ut
-              euismod placerat velit, pharetra pellentesque augue feugiat in.
-              Quisque eu imperdiet mi. Nunc laoreet ac leo vel aliquam. Morbi
-              vitae felis lacus. In interdum euismod tellus. Vestibulum ultrices
-              neque et odio condimentum egestas. Etiam mattis consectetur
-              rhoncus. Duis nec mauris quis tortor finibus rhoncus id vitae
-              urna. Nulla interdum leo gravida porttitor dapibus. Pellentesque
-              vitae facilisis ex. Proin varius lacinia leo in placerat. Integer
-              in sollicitudin massa.
-            </p>
-          </div>
-          <div className="column is-one-third">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-              tempus ante vel massa tempor fringilla eget sit amet lorem. Ut
-              euismod placerat velit, pharetra pellentesque augue feugiat in.
-              Quisque eu imperdiet mi. Nunc laoreet ac leo vel aliquam. Morbi
-              vitae felis lacus. In interdum euismod tellus. Vestibulum ultrices
-              neque et odio condimentum egestas. Etiam mattis consectetur
-              rhoncus. Duis nec mauris quis tortor finibus rhoncus id vitae
-              urna. Nulla interdum leo gravida porttitor dapibus. Pellentesque
-              vitae facilisis ex. Proin varius lacinia leo in placerat. Integer
-              in sollicitudin massa.
-            </p>
-          </div>
-          <div className="column is-one-third">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-              tempus ante vel massa tempor fringilla eget sit amet lorem. Ut
-              euismod placerat velit, pharetra pellentesque augue feugiat in.
-              Quisque eu imperdiet mi. Nunc laoreet ac leo vel aliquam. Morbi
-              vitae felis lacus. In interdum euismod tellus. Vestibulum ultrices
-              neque et odio condimentum egestas. Etiam mattis consectetur
-              rhoncus. Duis nec mauris quis tortor finibus rhoncus id vitae
-              urna. Nulla interdum leo gravida porttitor dapibus. Pellentesque
-              vitae facilisis ex. Proin varius lacinia leo in placerat. Integer
-              in sollicitudin massa.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </Fragment>
-);
+        </section>
+      </Fragment>
+    );
+  }
+}
 
-export default Work
+export default Work;

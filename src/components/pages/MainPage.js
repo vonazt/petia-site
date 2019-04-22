@@ -1,39 +1,25 @@
 import React, { Fragment } from "react";
+import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import Home from "./Home";
 import About from "./About";
 import Work from "./Work";
 
-class MainPage extends React.Component {
-  render() {
-    return (
+const MainPage = () => {
+  return (
+    <ParallaxProvider>
       <Fragment>
-        <div className="parallax">
-          <div className="parallax-group">
-            <div className="parallax-layer parallax-layer-back">
-              <Home />
-            </div>
-            {/* <div className="parallax-layer parallax-layer-base">
-             
-            </div> */}
-          </div>
-          <div className="parallax-group">
-            <div className="parallax-layer parallax-layer-forward">
-              <section className="sloped">
-                <About />
-              </section>
-            </div>
-            <div className="parallax-layer parallax-layer-forwarder">
-              <Work />
-            </div>
-          </div>
-
-          {/* <div className="parallax-layer parallax-layer-back">
-            <Work />
-          </div> */}
-        </div>
+        <Parallax y={[-40, 40]}>
+          <section className="down-slope">
+            <Home />
+          </section>
+        </Parallax>
+        <section className="sloped" style={{ marginTop: "-10rem" }}>
+          <About />
+        </section>
+        <Work />
       </Fragment>
-    );
-  }
-}
+    </ParallaxProvider>
+  );
+};
 
 export default MainPage;
