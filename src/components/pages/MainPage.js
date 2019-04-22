@@ -13,10 +13,14 @@ const MainPage = () => {
             <Home />
           </section>
         </Parallax>
-        <section className="sloped" style={{ marginTop: "-10rem" }}>
+        <section className="sloped">
           <About />
         </section>
-        <Work />
+        <section className="sloped">
+          <Parallax y={[-20, 20]}>
+            <Work />
+          </Parallax>
+        </section>
       </Fragment>
     </ParallaxProvider>
   );

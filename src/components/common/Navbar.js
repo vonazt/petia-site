@@ -29,11 +29,11 @@ class Navbar extends Component {
   handleScroll = event => {
     const posY = (document.body || document.documentElement || document.body.parentNode).scrollTop || window.pageYOffset
     console.log('posY ', posY)
-    if (window.pageYOffset < 900)
+    if (window.pageYOffset < 900 || window.pageYOffset >= 1705)
       this.setState({
         navClass: { navbar: "landing-nav", item: "landing-nav-item" }
       });
-    if (window.pageYOffset >= 900)
+    if (window.pageYOffset >= 900 && window.pageYOffset < 1705)
       this.setState({
         navClass: { navbar: "about-nav", item: "about-nav-item" }
       });

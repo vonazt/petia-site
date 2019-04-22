@@ -7,6 +7,7 @@ body {
 
 .sloped {
   clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% 100%, 0% calc(100% - 7vw));
+  margin-top: -10rem;
 }
 
 .down-slope {

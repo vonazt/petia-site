@@ -1,7 +1,13 @@
 @import './common/variables';
 
 .work-container {
-  height: 100vh;
-  padding-top: 10vh;
+  height: 115vh;
+  padding-top: 15vh;
   background-color: $charcoal;
+}
+
+.carousel-container {
+  background-color: $teal;
+  width: 100vw;
+  margin: 0;
 }
