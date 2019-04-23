@@ -3,6 +3,9 @@
 body {
   box-sizing: border-box;
   background-color: red;
+  a {
+    color: $charcoal;
+  }
 }
 
 .sloped {
@@ -13,4 +16,8 @@ body {
 .down-slope {
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% calc(100% - 7vw));
   margin-bottom: -5vh;
+}
+
+.where-next-container {
+  padding-bottom: 5vh;
 }

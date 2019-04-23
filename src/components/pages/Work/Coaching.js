@@ -1,12 +1,17 @@
-import React, { Fragment } from "react";
+import React, { useEffect } from "react";
+import { WhereNext } from "../../common/WhereNext";
 
-const About = () => (
-  <Fragment>
-    <section className="about-container">
-      <div className="container">
+export const Coaching = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <div className="coaching-container">
+      <div className="container fade">
         <div className="columns">
           <div className="column is-fullwidth">
-            <h2 className="section-heading">About</h2>
+            <h1 className="section-heading">Coaching</h1>
           </div>
         </div>
         <div className="columns">
@@ -65,9 +70,8 @@ const About = () => (
             </p>
           </div>
         </div>
+        <WhereNext section="Coaching" />
       </div>
-    </section>
-  </Fragment>
-);
-
-export default About;
+    </div>
+  );
+};

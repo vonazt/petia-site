@@ -1,6 +1,11 @@
-import React from "react";
-const Home = () => 
- (
+import React, { Fragment, useEffect } from "react";
+
+const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return (
+    <Fragment>
       <section className="hero is-fullheight landing-container">
         <div className="hero-body">
           <div className="container">
@@ -11,6 +16,8 @@ const Home = () =>
           </div>
         </div>
       </section>
-    );
+    </Fragment>
+  );
+};
 
-export default Home
+export default Home;

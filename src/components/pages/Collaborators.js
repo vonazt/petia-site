@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, {Component} from 'react'
 import {
   CarouselProvider,
   Slider,
@@ -7,22 +7,12 @@ import {
   ButtonNext
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCouch } from "@fortawesome/free-solid-svg-icons";
 
-class Work extends Component {
+export default class Collaborators extends Component {
+
   render() {
     return (
-      <Fragment>
-        <section className="work-container">
-          <div className="columns">
-            <div className="column is-fullwidth">
-              <h2 className="section-heading" style={{ color: "white" }}>
-                Work
-              </h2>
-            </div>
-          </div>
-          <div className="carousel-container">
+      <div className="carousel-container">
             <CarouselProvider
               naturalSlideWidth={100}
               naturalSlideHeight={30}
@@ -62,32 +52,6 @@ class Work extends Component {
               </div>
             </CarouselProvider>
           </div>
-          <div className="container">
-            <div className="columns">
-              <div className="column is-one-third">
-                <h2 className="work-heading">
-                  Coaching{" "}
-                  <br/><FontAwesomeIcon icon={faCouch} size="2x" color="white" />{" "}
-                </h2>
-              </div>
-              <div className="column is-one-third">
-                <h2 className="work-heading">
-                  Project Management & Design{" "}
-                  <br/><FontAwesomeIcon icon={faCouch} size="2x" color="white" />{" "}
-                </h2>
-              </div>
-              <div className="column is-one-third">
-                <h2 className="work-heading">
-                  Consulting{" "}
-                  <br/><FontAwesomeIcon icon={faCouch} size="2x" color="white" />{" "}
-                </h2>
-              </div>
-            </div>
-          </div>
-        </section>
-      </Fragment>
-    );
+    )
   }
 }
-
-export default Work;

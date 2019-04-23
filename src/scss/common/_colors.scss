@@ -18,9 +18,11 @@
   color: $off-white;
 }
 
-.section-heading {
-  color: black;
+.section-heading, .where-next-heading {
+  color: $charcoal;
 }
+
+
 
 nav.navbar {
   background-color:$charcoal;

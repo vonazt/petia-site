@@ -20,6 +20,10 @@ class Navbar extends Component {
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll, true);
+    if (this.props.location.pathname === "/work/coaching")
+      this.setState({
+        navClass: { navbar: "about-nav", item: "about-nav-item" }
+      });
   }
 
   componentWillUnmount() {
@@ -27,9 +31,10 @@ class Navbar extends Component {
   }
 
   handleScroll = event => {
-    const posY = (document.body || document.documentElement || document.body.parentNode).scrollTop || window.pageYOffset
-    console.log('posY ', posY)
-    if (window.pageYOffset < 900 || window.pageYOffset >= 1705)
+    if (
+      this.props.location.pathname !== "/work/coaching" &&
+      (window.pageYOffset < 900 || window.pageYOffset >= 1705)
+    )
       this.setState({
         navClass: { navbar: "landing-nav", item: "landing-nav-item" }
       });
@@ -46,7 +51,7 @@ class Navbar extends Component {
     } = this.props;
     return (
       <nav
-        className={`navbar is-fixed-top ${navClass.navbar}`}
+        className={`navbar ${navClass.navbar}`}
         role="navigation"
         aria-label="main-naivagation"
       >
